@@ -78,9 +78,9 @@ int main(int argc, char* argv[]) {
         ledY.turnOn();  
         usleep(FLASH_DELAY); 
     }
-    led1.displayState();
-    led2.displayState(); 
-    led3.displayState();
+    ledR.displayState();
+    ledG.displayState(); 
+    ledY.displayState();
     cout << "Finished the makeLEDs program" << endl;
     return 0;
 }
