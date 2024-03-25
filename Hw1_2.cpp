@@ -59,7 +59,7 @@ LED::~LED() {  // The destructor unexports the sysfs GPIO entries
 
 int main(int argc, char* argv[]) {
     cout << "Starting the makeLEDs program" << endl;
-    LED ledR(4), ledG(17), ledY(27);
+    LED ledR(516), ledG(529), ledY(539);
     
     for (int i = 0; i < 20; i++) {
         ledR.turnOn();  
