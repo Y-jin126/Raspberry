@@ -6,7 +6,7 @@ using namespace std;
 #define LED_GPIO      17      // this is GPIO17, Pin 11
 #define BUTTON_GPIO   27      // this is GPIO27, Pin 13
 #define DEBOUNCE_TIME 200
-#define stateLED HIGH
+bool stateLED =false;
 
 
 void lightLED(void){
