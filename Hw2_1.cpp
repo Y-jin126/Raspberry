@@ -13,8 +13,12 @@ void lightLED(void){
   static unsigned long lastISRTime = 0,  x = 1;
   unsigned long currentISRTime = millis();
   if(currentISRTime - lastISRTime > DEBOUNCE_TIME){
-    digitalWrite(LED_GPIO, !stateLED);         // turn the LED on
-    cout << "Button pressed " << x++ << " times! LED on" << endl;
+    digitalWrite(LED_GPIO, !stateLED);     
+    stateLED = !stateLED;
+    if(stateLED)
+      cout << "Button pressed " << x++ << " times! LED on" << endl;
+    else
+      cout << "Button pressed " << x++ << " times! LED off" << endl;
   }
   lastISRTime = currentISRTime;
 }
