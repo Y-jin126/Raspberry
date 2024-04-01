@@ -3,11 +3,11 @@
 #include <unistd.h>
 using namespace std;
 
-#define RLED_GPIO      17 
-#define RBUTTON_GPIO   27
-#define GLED_GPIO      17 
-#define GBUTTON_GPIO   27 
-#define YLED_GPIO      17 
+#define RLED_GPIO      18
+#define RBUTTON_GPIO   4
+#define GLED_GPIO      23
+#define GBUTTON_GPIO   17 
+#define YLED_GPIO      24
 #define YBUTTON_GPIO   27 
 
 #define DEBOUNCE_TIME 200
