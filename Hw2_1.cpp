@@ -22,7 +22,7 @@ void lightRLED(void){
   if(currentISRTime - lastISRTime > DEBOUNCE_TIME){
     digitalWrite(RLED_GPIO, !stateRLED);     
     stateRLED = !stateRLED;
-    if(stateLED)
+    if(stateRLED)
       cout << "Button pressed " << x++ << " times! LED on" << endl;
     else
       cout << "Button pressed " << x++ << " times! LED off" << endl;
@@ -36,7 +36,7 @@ void lightGLED(void){
   if(currentISRTime - lastISRTime > DEBOUNCE_TIME){
     digitalWrite(GLED_GPIO, !stateGLED);     
     stateGLED = !stateGLED;
-    if(stateLED)
+    if(stateGLED)
       cout << "Button pressed " << x++ << " times! LED on" << endl;
     else
       cout << "Button pressed " << x++ << " times! LED off" << endl;
@@ -50,7 +50,7 @@ void lightYLED(void){
   if(currentISRTime - lastISRTime > DEBOUNCE_TIME){
     digitalWrite(YLED_GPIO, !stateYLED);     
     stateYLED = !stateYLED;
-    if(stateLED)
+    if(stateYLED)
       cout << "Button pressed " << x++ << " times! LED on" << endl;
     else
       cout << "Button pressed " << x++ << " times! LED off" << endl;
@@ -70,9 +70,9 @@ int main() {
   digitalWrite (GLED_GPIO, LOW);
   digitalWrite (YLED_GPIO, LOW);
   
-  wiringPiISR(RBUTTON_GPIO, INT_EDGE_RISING, &lightLED);
-  wiringPiISR(GBUTTON_GPIO, INT_EDGE_RISING, &lightLED);
-  wiringPiISR(YBUTTON_GPIO, INT_EDGE_RISING, &lightLED);
+  wiringPiISR(RBUTTON_GPIO, INT_EDGE_RISING, &lightRLED);
+  wiringPiISR(GBUTTON_GPIO, INT_EDGE_RISING, &lightGLED);
+  wiringPiISR(YBUTTON_GPIO, INT_EDGE_RISING, &lightYLED);
   for(int i=30; i>0; i--){              // countdown to program end
     cout << "You have " << i << " seconds remaining..." << endl;
     sleep(1);                          // sleep for 1 second
