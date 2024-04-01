@@ -3,7 +3,7 @@
 #include <unistd.h>
 using namespace std;
 
-#define RLED_GPIO      25
+#define RLED_GPIO      18
 #define RBUTTON_GPIO   4
 #define GLED_GPIO      23
 #define GBUTTON_GPIO   17 
