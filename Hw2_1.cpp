@@ -23,9 +23,9 @@ void lightRLED(void){
     digitalWrite(RLED_GPIO, !stateRLED);     
     stateRLED = !stateRLED;
     if(stateRLED)
-      cout << "Button pressed " << x++ << " times! LED on" << endl;
+      cout << "Red Button pressed " << x++ << " times! RedLED on" << endl;
     else
-      cout << "Button pressed " << x++ << " times! LED off" << endl;
+      cout << "Red Button pressed " << x++ << " times! RedLED off" << endl;
   }
   lastISRTime = currentISRTime;
 }
@@ -37,9 +37,9 @@ void lightGLED(void){
     digitalWrite(GLED_GPIO, !stateGLED);     
     stateGLED = !stateGLED;
     if(stateGLED)
-      cout << "Button pressed " << x++ << " times! LED on" << endl;
+      cout << "Green Button pressed " << x++ << " times! GreenLED on" << endl;
     else
-      cout << "Button pressed " << x++ << " times! LED off" << endl;
+      cout << "Green Button pressed " << x++ << " times! GreenLED off" << endl;
   }
   lastISRTime = currentISRTime;
 }
@@ -51,9 +51,9 @@ void lightYLED(void){
     digitalWrite(YLED_GPIO, !stateYLED);     
     stateYLED = !stateYLED;
     if(stateYLED)
-      cout << "Button pressed " << x++ << " times! LED on" << endl;
+      cout << "Yellow Button pressed " << x++ << " times! YellowLED on" << endl;
     else
-      cout << "Button pressed " << x++ << " times! LED off" << endl;
+      cout << "Yellow Button pressed " << x++ << " times! YellowLED off" << endl;
   }
   lastISRTime = currentISRTime;
 }
