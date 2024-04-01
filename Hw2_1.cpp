@@ -20,8 +20,8 @@ void lightRLED(void){
   static unsigned long lastISRTime = 0,  x = 1;
   unsigned long currentISRTime = millis();
   if(currentISRTime - lastISRTime > DEBOUNCE_TIME){
-    digitalWrite(RLED_GPIO, !stateLED);     
-    stateLED = !stateLED;
+    digitalWrite(RLED_GPIO, !stateRLED);     
+    stateRLED = !stateRLED;
     if(stateLED)
       cout << "Button pressed " << x++ << " times! LED on" << endl;
     else
@@ -34,8 +34,8 @@ void lightGLED(void){
   static unsigned long lastISRTime = 0,  x = 1;
   unsigned long currentISRTime = millis();
   if(currentISRTime - lastISRTime > DEBOUNCE_TIME){
-    digitalWrite(GLED_GPIO, !stateLED);     
-    stateLED = !stateLED;
+    digitalWrite(GLED_GPIO, !stateGLED);     
+    stateGLED = !stateGLED;
     if(stateLED)
       cout << "Button pressed " << x++ << " times! LED on" << endl;
     else
@@ -48,8 +48,8 @@ void lightYLED(void){
   static unsigned long lastISRTime = 0,  x = 1;
   unsigned long currentISRTime = millis();
   if(currentISRTime - lastISRTime > DEBOUNCE_TIME){
-    digitalWrite(YLED_GPIO, !stateLED);     
-    stateLED = !stateLED;
+    digitalWrite(YLED_GPIO, !stateYLED);     
+    stateYLED = !stateYLED;
     if(stateLED)
       cout << "Button pressed " << x++ << " times! LED on" << endl;
     else
