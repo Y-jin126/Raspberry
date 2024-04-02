@@ -20,7 +20,6 @@ while(true) {
     pwmWrite(PWM_RLED, i);
     usleep(1000);
     }
-  }
   for(int i= 1; i < 1000; i++){
     pwmWrite(PWM_GLED,i);
     usleep(1000);
