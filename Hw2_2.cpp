@@ -5,16 +5,14 @@ using namespace std;
 #define PWM_RLED   25
 #define PWM_GLED  23
 
-bool running = true;
-
 int main() {
   wiringPiSetupGpio();
   pinMode(PWM_RLED, PWM_OUTPUT);
   pinMode(PW<_GLED, PWM_OUTPUT);
-  wiringPiISR(BUTTON_GPIO, INT_EDGE_RISING, &buttonPress);
+  wiringPiISR(BUTTON_GPIO, INT_EDGE_RISING);
   pwmSetRange(1000);
 
-while(running) {
+while(;;) {
   for(int i= 1; i < 1000; i++){
     pwmWrite(PWM_RLED,i);
     usleep(1000);
