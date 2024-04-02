@@ -4,7 +4,7 @@
 using namespace std;
 
 #define RLED_GPIO      18
-#define RBUTTON_GPIO   4
+#define RBUTTON_GPIO   25
 #define GLED_GPIO      23
 #define GBUTTON_GPIO   17 
 #define YLED_GPIO      24
