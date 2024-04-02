@@ -8,11 +8,10 @@ using namespace std;
 int main() {
   wiringPiSetupGpio();
   pinMode(PWM_RLED, PWM_OUTPUT);
-  pinMode(PW<_GLED, PWM_OUTPUT);
-  wiringPiISR(BUTTON_GPIO, INT_EDGE_RISING);
+  pinMode(PWM_GLED, PWM_OUTPUT);
   pwmSetRange(1000);
 
-while(;;) {
+while(true) {
   for(int i= 1; i < 1000; i++){
     pwmWrite(PWM_RLED,i);
     usleep(1000);
@@ -30,6 +29,7 @@ while(;;) {
     pwmWrite(PWM_GLED, i);
     usleep(1000);
     }
+  
   }
   return 0;
 }
