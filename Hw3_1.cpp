@@ -31,26 +31,30 @@ int main(int argc, char* argv[]){
     T= micros() - startTime;
     L = T / 58.2;
     if (L > 0 || L < 10 ) {
-      degitalWrite(RLED_GPIO,HIGH);
-      degitalWrite(GLED_GPIO,LOW);
-      degitalWrite(BLED_GPIO,LOW);
+      digitalWrite(RLED_GPIO,HIGH);
+      digitalWrite(GLED_GPIO,LOW);
+      digitalWrite(BLED_GPIO,LOW);
     }
     else if (L>=10 || L < 15){
-      degitalWrite(RLED_GPIO,LOW);
-      degitalWrite(GLED_GPIO,HIGH);
-      degitalWrite(BLED_GPIO,LOW);
+      digitalWrite(RLED_GPIO,LOW);
+      digitalWrite(GLED_GPIO,HIGH);
+      digitalWrite(BLED_GPIO,LOW);
     }
     else if ( L>=15 || L < 30){
-      degitalWrite(RLED_GPIO,LOW);
-      degitalWrite(GLED_GPIO,LOW);
-      degitalWrite(BLED_GPIO,HIGH);
+      digitalWrite(RLED_GPIO,LOW);
+      digitalWrite(GLED_GPIO,LOW);
+      digitalWrite(BLED_GPIO,HIGH);
     }
     else{
-      degitalWrite(RLED_GPIO,LOW);
-      degitalWrite(GLED_GPIO,LOW);
-      degitalWrite(BLED_GPIO,LOW);
+      digitalWrite(RLED_GPIO,LOW);
+      digitalWrite(GLED_GPIO,LOW);
+      digitalWrite(BLED_GPIO,LOW);
     }
+       delay(100);
+  }
+    return 0;
+  }
       
-    delay(100);
+
   
   }
