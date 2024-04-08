@@ -17,7 +17,7 @@ int main(int argc, char* argv[]){
   pinMode(PIN_ECHO, INPUT);
   pinMode(RLED_GPIO, OUTPUT);  
   pinMode(GLED_GPIO, OUTPUT);
-  pinMode(YLED_GPIO, OUTPUT);
+  pinMode(BLED_GPIO, OUTPUT);
   while(1){
     digitalWrite(PIN_TRIG, LOW);
     delayMicroseconds(2);
@@ -53,8 +53,4 @@ int main(int argc, char* argv[]){
        delay(100);
   }
     return 0;
-  }
-      
-
-  
   }
