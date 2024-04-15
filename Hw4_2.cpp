@@ -9,7 +9,7 @@
 #define BLED_GPIO 21
 
 int main(void) {
- wiringPiSetup();
+ wiringPiSetupGpio();
   mcp3004Setup(BASE, SPI_CHAN); 
   pinMode(RLED_GPIO, OUTPUT);
   pinMode(GLED_GPIO, OUTPUT);
