@@ -78,26 +78,26 @@ int main(){
  short y = combineValues(dataBuffer[DATAY1], dataBuffer[DATAY0]);
  short z = combineValues(dataBuffer[DATAZ1], dataBuffer[DATAZ0]);
    if(x>0){
-     digitalWrite(RLED_GPIO, HIGH);
-     digitalWrite(GLED_GPIO, LOW);
-     digitalWrite(BLED_GPIO, LOW);
+       digitalWrite(RLED_GPIO,HIGH);
+      digitalWrite(GLED_GPIO,LOW);
+      digitalWrite(BLED_GPIO,LOW);
    }
-   if(y>0){
-     digitalWrite(RLED_GPIO, LOW);
-     digitalWrite(GLED_GPIO, HIGH);
-     digitalWrite(BLED_GPIO, LOW);
+   else if(y>0){
+    digitalWrite(RLED_GPIO,LOW);
+      digitalWrite(GLED_GPIO,HIGH);
+      digitalWrite(BLED_GPIO,LOW);
      
    }
    else if(z>0){
-     digitalWrite(RLED_GPIO, LOW);
-     digitalWrite(GLED_GPIO, LOW);
-     digitalWrite(BLED_GPIO, HIGH);
+    digitalWrite(RLED_GPIO,LOW);
+      digitalWrite(GLED_GPIO,LOW);
+      digitalWrite(BLED_GPIO,HIGH);
      
    }
    else{
-     digitalWrite(RLED_GPIO, LOW);
-     digitalWrite(GLED_GPIO, LOW);
-     digitalWrite(BLED_GPIO, LOW);
+      digitalWrite(RLED_GPIO,LOW);
+      digitalWrite(GLED_GPIO,LOW);
+      digitalWrite(BLED_GPIO,LOW);
      
    }
    
