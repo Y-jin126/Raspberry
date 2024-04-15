@@ -78,7 +78,10 @@ int main(){
  short x = combineValues(dataBuffer[DATAX1], dataBuffer[DATAX0]);
  short y = combineValues(dataBuffer[DATAY1], dataBuffer[DATAY0]);
  short z = combineValues(dataBuffer[DATAZ1], dataBuffer[DATAZ0]);
-   if(x>0){
+   
+ cout << "X=" << x << "Y=" << y << " Z=" << z << " sample=" << count << " \r" << flush;
+
+  if(x>0){
        digitalWrite(RLED_GPIO,HIGH);
       digitalWrite(GLED_GPIO,LOW);
       digitalWrite(BLED_GPIO,LOW);
@@ -101,8 +104,6 @@ int main(){
       digitalWrite(BLED_GPIO,LOW);
      
    }
-   
- cout << "X=" << x << "Y=" << y << " Z=" << z << " sample=" << count << " \r" << flush;
  usleep(1000000);
  readRegisters(file); count++;
  }
