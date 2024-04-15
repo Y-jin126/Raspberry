@@ -19,7 +19,7 @@ int main(void) {
            return 1;
  int x;
  
- while (1) {
+ while (true) {
  x = analogRead(BASE);
   if (x < 500)
  printf("%d\n", x);
