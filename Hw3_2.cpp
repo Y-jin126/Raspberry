@@ -8,7 +8,7 @@ using namespace std;
 #define DHT_GPIO         22      // Using GPIO 22 for this example
 #define LH_THRESHOLD     26      // Low=~14, High=~38 - pick avg.
 
-#define RLED_GPIO 4
+#define RLED_GPIO 16
 #define GLED_GPIO 17
 
 int main(){
