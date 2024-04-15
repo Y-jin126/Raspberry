@@ -55,6 +55,10 @@ short combineValues(unsigned char msb, unsigned char lsb){
  return ((short)msb << 8) | (short)lsb;
 }
 int main(){
+ if (wiringPiSetup() == -1) {
+        cout << "wiringPi initialization failed." << endl;
+        return 1;
+    }
   int file;
   pinMode(RLED_GPIO, OUTPUT);
   pinMode(GLED_GPIO, OUTPUT);
