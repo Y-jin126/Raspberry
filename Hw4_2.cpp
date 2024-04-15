@@ -20,7 +20,7 @@ int main(void) {
  while (1) {
  x = analogRead(BASE);
   if (x < 500)
- printf("%d\n", x)
+ printf("%d\n", x);
  if (x < 100)
    digitalWrite(RLED_GPIO, HIGH);
   else if(x>100 && x <200)
