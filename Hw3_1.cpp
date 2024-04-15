@@ -30,17 +30,17 @@ int main(int argc, char* argv[]){
     while(digitalRead(PIN_ECHO) == LOW);
     T= micros() - startTime;
     L = T / 58.2;
-    if (L > 0 || L < 10 ) {
+    if (L > 0 && L < 10 ) {
       digitalWrite(RLED_GPIO,HIGH);
       digitalWrite(GLED_GPIO,LOW);
       digitalWrite(BLED_GPIO,LOW);
     }
-    else if (L>=10 || L < 15){
+    else if (L>=10 && L < 15){
       digitalWrite(RLED_GPIO,LOW);
       digitalWrite(GLED_GPIO,HIGH);
       digitalWrite(BLED_GPIO,LOW);
     }
-    else if ( L>=15 || L < 30){
+    else if ( L>=15 && L < 30){
       digitalWrite(RLED_GPIO,LOW);
       digitalWrite(GLED_GPIO,LOW);
       digitalWrite(BLED_GPIO,HIGH);
