@@ -2,8 +2,6 @@
 #include <stdio.h>
 #include <fcntl.h>
 #include <sys/ioctl.h>
-#include <wiringPiI2C.h>
-#include <wiringPi.h>
 #include <iomanip>
 #include <unistd.h>
 #include <linux/i2c.h>
