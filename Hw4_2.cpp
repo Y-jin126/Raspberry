@@ -19,9 +19,23 @@ int main(void) {
  
  while (1) {
  x = analogRead(BASE);
- if (x < 500)
- printf("%d\n", x);
+ if (x < 150)
+   digitalWrite(RLED_GPIO, HIGH);
+  else if(x>150 && x <300)
+    digitalWrite(GLED_GPIO, HIGH);
+  else if(x<500 && x>300)
+    digitalWrite(BLED_GPIO, HIGH);
+  else {
+    digitalWrite(RLED_GPIO,LOW);
+  digitalWrite(GLED_GPIO,LOW);
+  digitalWrite(BLED_GPIO,LOW);
+  }
+ 
+
+
+  
  delay(100);
+  
 
    
  }
