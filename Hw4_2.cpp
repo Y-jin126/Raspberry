@@ -19,11 +19,11 @@ int main(void) {
  
  while (1) {
  x = analogRead(BASE);
- if (x < 150)
+ if (x < 30)
    digitalWrite(RLED_GPIO, HIGH);
-  else if(x>150 && x <300)
+  else if(x>100 && x <200)
     digitalWrite(GLED_GPIO, HIGH);
-  else if(x<500 && x>300)
+  else if(x<500 && x>200)
     digitalWrite(BLED_GPIO, HIGH);
   else {
     digitalWrite(RLED_GPIO,LOW);
