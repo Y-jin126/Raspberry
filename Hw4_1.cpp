@@ -94,7 +94,6 @@ if (wiringPiSetup() == -1) {
 
   if(x>0&& y<0 && z<0){
     digitalWrite(RLED_GPIO,HIGH);
-	cout << "RED" << endl;
 
   }
    else if(y>0 && x<0 && z<0){
