@@ -14,7 +14,9 @@ int main(void) {
   pinMode(RLED_GPIO, OUTPUT);
   pinMode(GLED_GPIO, OUTPUT);
   pinMode(BLED_GPIO, OUTPUT);
- 
+
+ if (wiringPiSetup() == -1) 
+           return 1;
  int x;
  
  while (1) {
