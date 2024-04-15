@@ -6,9 +6,9 @@ using namespace std;
 #define RANGE_MAX  200
 #define RANGE_MIN  0
 
-#define RLED_GPIO  4
+#define RLED_GPIO  16
 #define GLED_GPIO 17
-#define BLED_GPIO 27
+#define BLED_GPIO 21
 
 int main(int argc, char* argv[]){
   wiringPiSetupGpio();
