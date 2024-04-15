@@ -23,11 +23,11 @@ int main(void) {
  x = analogRead(BASE);
   if (x < 500)
  printf("%d\n", x);
- if (x < 100)
+ if (x < 50)
    digitalWrite(RLED_GPIO, HIGH);
-  else if(x>100 && x <200)
+  else if(x>50 && x <150)
     digitalWrite(GLED_GPIO, HIGH);
-  else if(x<500 && x>200)
+  else if(x<500 && x>150)
     digitalWrite(BLED_GPIO, HIGH);
   else {
     digitalWrite(RLED_GPIO,LOW);
