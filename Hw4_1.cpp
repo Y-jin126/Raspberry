@@ -55,6 +55,7 @@ short combineValues(unsigned char msb, unsigned char lsb){
  return ((short)msb << 8) | (short)lsb;
 }
 int main(){
+  int file;
   pinMode(RLED_GPIO, OUTPUT);
   pinMode(GLED_GPIO, OUTPUT);
   pinMode(BLED_GPIO, OUTPUT);
