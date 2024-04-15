@@ -24,8 +24,8 @@ using namespace std;
 #define BUFFER_SIZE 0x40
 unsigned char dataBuffer[BUFFER_SIZE];
 
-#define RLED_GPIO 16
-#define GLED_GPIO 20
+#define RLED_GPIO 23
+#define GLED_GPIO 24
 #define BLED_GPIO 21
 
 
@@ -55,9 +55,15 @@ short combineValues(unsigned char msb, unsigned char lsb){
  return ((short)msb << 8) | (short)lsb;
 }
 int main(){
+<<<<<<< Updated upstream
  if (wiringPiSetup() == -1) {
         cout << "wiringPi initialization failed." << endl;
         return 1;
+=======
+wiringPiSetupGpio();
+if (wiringPiSetup() == -1) {
+           return 1;
+>>>>>>> Stashed changes
     }
   int file;
   pinMode(RLED_GPIO, OUTPUT);
@@ -86,22 +92,16 @@ int main(){
    
  cout << "X=" << x << "Y=" << y << " Z=" << z << " sample=" << count << " \r" << flush;
 
-  if(x>0){
-       digitalWrite(RLED_GPIO,HIGH);
-      digitalWrite(GLED_GPIO,LOW);
-      digitalWrite(BLED_GPIO,LOW);
-   }
-   else if(y>0){
-    digitalWrite(RLED_GPIO,LOW);
+  if(x>0&& y<0 && z<0){
+    digitalWrite(RLED_GPIO,HIGH);
+	cout << "RED" << endl;
+
+  }
+   else if(y>0 && x<0 && z<0){
       digitalWrite(GLED_GPIO,HIGH);
-      digitalWrite(BLED_GPIO,LOW);
-     
    }
-   else if(z>0){
-    digitalWrite(RLED_GPIO,LOW);
-      digitalWrite(GLED_GPIO,LOW);
-      digitalWrite(BLED_GPIO,HIGH);
-     
+   else if(x<0 && y<0 &&z>0){
+    digitalWrite(BLED_GPIO,HIGH);
    }
    else{
       digitalWrite(RLED_GPIO,LOW);
